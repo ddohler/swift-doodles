@@ -28,6 +28,7 @@ class User {
 }
 
 for user in users {
+  // Downcasting
   if let name = user["name"] as? String,
      let age = user["age"] as? Int,
      let address = user["address"] as? [String:String] {
