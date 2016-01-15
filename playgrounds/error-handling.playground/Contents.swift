@@ -77,7 +77,7 @@ class VendingMachine {
     
     coinsDeposited -= item.price
 
-    --item.count
+    item.count -= 1
     inventory[name] = item
     dispenseSnack(name)
   }
@@ -87,7 +87,7 @@ var vendingMachine = VendingMachine()
 vendingMachine.coinsDeposited = 10
 do {
   try vendingMachine.vend(itemNamed: "Chips")
-  vendingMachine.coinsDeposited = 8
+  vendingMachine.coinsDeposited += 8
   vendingMachine.vend(itemNamed: "Chips")
   //try vendingMachine.vend(itemNamed: "Chips")
   try vendingMachine.vend(itemNamed: "Snickers")
